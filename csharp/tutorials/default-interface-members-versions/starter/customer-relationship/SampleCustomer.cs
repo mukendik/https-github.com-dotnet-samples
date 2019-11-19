@@ -22,6 +22,7 @@ namespace customer_relationship
         private Dictionary<DateTime, string> reminders = new Dictionary<DateTime, string>();
         public IDictionary<DateTime, string> Reminders => reminders;
 
+        // Version 1: 
         public void AddOrder(IOrder order)
         {
             if (order.Purchased > (LastOrder ?? DateTime.MinValue))
@@ -50,5 +51,6 @@ namespace customer_relationship
             return 0;
         }
 
+      
     }
 }

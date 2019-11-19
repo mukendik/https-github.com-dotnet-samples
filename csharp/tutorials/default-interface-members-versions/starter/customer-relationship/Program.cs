@@ -34,6 +34,11 @@ namespace customer_relationship
             foreach (IOrder order in c.PreviousOrders)
                 Console.WriteLine($"Order on {order.Purchased} for {order.Cost}");
 
+            
+            SampleCustomer.SetLoyaltyThresholds(new TimeSpan(30, 0, 0, 0), 10, 0.25m);
+            Console.WriteLine($"Current discount: {c.ComputeLoyaltyDiscount()}");
+
+
         }
     }
 }
