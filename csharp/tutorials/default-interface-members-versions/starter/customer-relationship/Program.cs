@@ -29,6 +29,7 @@ namespace customer_relationship
             foreach(var item in c.Reminders)
             {
                 Console.WriteLine($"\t{item.Value} on {item.Key}");
+                Console.WriteLine($"\t{item.Value} on {item.Key}");
             }
             foreach (IOrder order in c.PreviousOrders)
                 Console.WriteLine($"Order on {order.Purchased} for {order.Cost}");
